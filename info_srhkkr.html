@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>SRH v KKR</title>
+        <link rel="stylesheet" href="info_srhkkrstyle.css">
+        <link rel="stylesheet" href="seat.css">
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js">
+        </script>
+        <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+        </head>
+        <body>
+
+            <div id="blocking" class="seatSelection col-lg-12">
+                <p class="seatSection">
+                    Click on any seat to book it 
+                </p>
+                <div class="seatsChart col-lg-6">
+                    <div class="seatRow step">
+                        <div class="seatRowNumber">
+                            Row 1
+                        </div>
+                        <div id="1_1" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber">1</div>
+                        <div id="1_2" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">2</div>
+                        <div id="1_3" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">3</div>
+                        <div id="1_4" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">4</div>
+                        <div id="1_5" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">5</div>
+                        <div id="1_6" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber  ">6</div>
+                        <div id="1_7" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">7</div>
+                        <div id="1_8" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">8</div>
+
+                    </div>
+                    <div class="seatRow">
+                        <div class="seatRowNumber">
+                            Row 2
+                        </div>
+                        <div id="2_1" role="checkbox" value="42" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">1</div>
+                        <div id="2_2" role="checkbox" value="42" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">2</div>
+                        <div id="2_3" role="checkbox" value="42" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">3</div>
+                        <div id="2_4" role="checkbox" value="42" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">4</div>
+                        <div id="2_5" role="checkbox" value="42" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">5</div>
+                        <div id="2_6" role="checkbox" value="42" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">6</div>
+                        <div id="2_7" role="checkbox" value="42" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">7</div>
+                        <div id="2_8" role="checkbox" value="42" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">8</div>
+
+                    </div>
+                    <div class="seatRow step">
+                        <div class="seatRowNumber">
+                            Row 3
+                        </div>
+                        <div id="3_1" role="checkbox" value="38" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">1</div>
+                        <div id="3_2" role="checkbox" value="38" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">2</div>
+                        <div id="3_3" role="checkbox" value="38" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">3</div>
+                        <div id="3_4" role="checkbox" value="38" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">4</div>
+                        <div id="3_5" role="checkbox" value="38" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">5</div>
+                        <div id="3_6" role="checkbox" value="38" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber  ">6</div>
+                        <div id="3_7" role="checkbox" value="38" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">7</div>
+                        <div id="3_8" role="checkbox" value="38" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">8</div>
+
+                    </div>
+                    <div class="seatRow">
+                        <div class="seatRowNumber">
+                            Row 4
+                        </div>
+                        <div id="4_1" role="checkbox" value="30" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">1</div>
+                        <div id="4_2" role="checkbox" value="30" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">2</div>
+                        <div id="4_3" role="checkbox" value="30" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">3</div>
+                        <div id="4_4" role="checkbox" value="30" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">4</div>
+                        <div id="4_5" role="checkbox" value="30" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">5</div>
+                        <div id="4_6" role="checkbox" value="30" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">6</div>
+                        <div id="4_7" role="checkbox" value="30" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">7</div>
+                        <div id="4_8" role="checkbox" value="30" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">8</div>
+
+                    </div>
+                    <div class="seatRow step">
+                        <div class="seatRowNumber step">
+                            Row 5
+                        </div>
+                        <div id="5_1" role="checkbox" value="28" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">1</div>
+                        <div id="5_2" role="checkbox" value="28" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">2</div>
+                        <div id="5_3" role="checkbox" value="28" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">3</div>
+                        <div id="5_4" role="checkbox" value="28" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">4</div>
+                        <div id="5_5" role="checkbox" value="28" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">5</div>
+                        <div id="5_6" role="checkbox" value="28" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">6</div>
+                        <div id="5_7" role="checkbox" value="28" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">7</div>
+                        <div id="5_8" role="checkbox" value="28" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">8</div>
+                    </div>
+                </div>
+                <div class="seatsReceipt col-lg-2">
+                    <p><strong>Selected Seats: <span id="seatsAmount" >0</span></strong> 
+                        <a href="payment.html" > <button id="btnClear" class="btn">Clear</button></a></p>
+                    <ul id="seatsList" class="nav nav-stacked"></ul>
+
+                </div>
+
+            <div class="checkout col-lg-offset-6">
+                <span>Total: Rs </span><span id="txtSubTotal">0.00</span><br /><button id="btnCheckout" name="btnCheckout" class="btn btn-primary" onclick="update(2)"> Click to pay</button>
+            </div>
+</div>
+
+            <div class="header" style="background-image: linear-gradient(yellow,gold);">
+                <a href="home.php"><div class="home">HOME</div></a>
+                <!--<a href="index (1).html"><div class="register" >REGISTER</div></a>-->
+                <!--<a href="#bookingm"><div class="booking">BOOK YOUR TICKET</div></a>-->
+                <!--<a href=""><div class="history">HISTORY</div></a>
+                <a href="#supportm"><div class="support">SUPPORT</div></a>
+                <a href="#aboutm"><div class="about">ABOUT US</div></a>-->
+                <a href="logout.php" style="float: right;"><div class="login">LOGOUT</div></a>
+                
+                <!--<div class="username">ASHWINKUMAR</div> -->
+                
+            </div>
+            <div class="banner">
+                <div class="content">
+                    <h2 style="color: white;">Sunrisers Hyderabad v Kolkata Knight Riders</h2>
+                    <img src="srh v kkr.webp" id="img1">
+                    <p>It took Sunrisers Hyderabad 10 games last year to find the right formula. 
+                        Even though that's quite late in an IPL season, they still had time to turn their 
+                        campaign around and make a late dash into the playoffs for the fifth consecutive time. 
+                        The usual suspects delivered, but more importantly, some new heroes emerged which 
+                        convinced the management to not make wholesale changes to the squad ahead of the 
+                        auction in February this year. The likes of Jason Holder, Sandeep Sharma, Wriddhiman Saha 
+                        stepped up to aid skipper David Warner and trumpcard Rashid Khan last year, 
+                        whereas T Natarajan's meteoric rise grabbed headlines. Add a fit-again Bhuvneshwar Kumar 
+                        to the mix, SRH are primed to hold on to their reputation of having the best bowling attack. 
+                        With the stars aligning towards the back end of the tournament last year, 2021 promises 
+                        more than just a top 4 finish to cap off this successful cycle. 
+                        Kolkata Knight Riders, on the other hand, had endured a frustrating season six months ago 
+                        in the UAE but their recent additions give them hope. Shakib Al Hasan, who was a part of 
+                        the side that won in 2012 and 2014, is back. They have also added Harbhajan Singh to 
+                        their ranks and will rely on the veteran on slow tracks. Varun Chakravarthy was a revelation 
+                        last year but they will hope for more wickets from Pat Cummins up front. 
+                        Eoin Morgan's first full season as KKR skipper is bound to cause excitement and 
+                        he will certainly pin his hopes on star allrounder Andre Russell, who had a forgettable 
+                        campaign with the bat last time around. </p>
+                    <p1>Date:</p1><p2>11/APR/2021 </p2>
+                    <br>
+                    <p1>Time:</p1><p2>7:30 PM GMT</p2>
+                    <br>
+                    <p1>Venue:</p1><p2>MA Chidambaram Stadium, Chennai</p2>
+                    <br>
+                    <br>
+                    <button type="button" class="button" id="button" onclick="dis(2)">Book Tickets</button>
+                </div>
+            </div>
+            <script
+                src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+             <script src="bill2.js"></script>
+        </body>
+    </head>
+</html>

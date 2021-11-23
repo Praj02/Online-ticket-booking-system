@@ -1,0 +1,79 @@
+
+.seatSelection {
+display:none;
+   border-radius:2em;
+    position:fixed;
+    top:35vh;
+    left:25vw;
+    width: 50%;
+    text-align: center;
+     padding: 5px;
+    margin:auto;
+    background-color: #1b2740;
+    color: #ffffff;
+    overflow: auto;
+}
+
+.seatsReceipt {
+	text-align: center;
+}
+.seatsChart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.seatNumber {
+	display: inline;
+	padding: 10px;
+	background-color: #5c86eb;
+	color: #FFF;
+	border-radius: 5px;
+	cursor: default;
+	height: 25px;
+	width: 25px;
+	line-height: 25px;
+	text-align: center;
+}
+
+.seatRow {
+    width: 60%;
+	padding: 10px;
+    background-color: #15671f52;
+}
+
+
+.seatUnavailable {
+	background-color: #fe696a;
+}
+
+.seatRowNumber {
+	clear: none;
+	display: inline;
+}
+
+.hidden {
+	display: none;
+}
+
+.seatsAmount {
+	max-width: 2em;
+}
+
+.btn{
+    background-color: rgb(251 188 5);
+    border-radius: 10em;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 1.2em;
+}
+.checkout{
+    margin: 1em;
+    float: right;
+}
+.step{
+    background-color: #0000005c;
+}
+.seatSelected {
+	background-color: lightgreen;
+	color: black;
+}

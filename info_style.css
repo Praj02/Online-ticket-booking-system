@@ -1,0 +1,112 @@
+html {
+    scroll-behavior: smooth;
+    transition-duration: 10s;
+      perspective: 600px;
+    
+  }
+  .header{
+    opacity: 1;
+    background-color: white;
+    padding-top:2px;
+    width: 100%;
+    height: 5em;
+    top:-1px;
+    z-index: 10;
+}
+.home,.register,.booking,.history,.support,.about,.username{
+    color: black;
+    position: relative;
+    float: left;
+    margin-top: 1em;
+    padding: 10px;
+    border-radius: 1em;
+    margin-left: 0.5em;
+    font-family: segoe UI;
+    font-weight: bolder;
+    font-size:1.3em;
+}
+
+.home:hover,.booking:hover,.history:hover,.support:hover,.about:hover,.register:hover{
+    background-color: #8dc43f;
+    color:white;
+    font-size: 1.3em;
+    font-style: italic;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .2s ease;
+}
+
+.login{
+    color: black;
+    position: relative;
+    float: left;
+    margin-top: 1em;
+    padding: 10px;
+    border-radius: 1em;
+    margin-left: 0.5em;
+    font-family: segoe UI;
+    font-weight: bolder;
+    font-size:1.3em;
+
+}
+.login:hover {
+    background-color: #8dc43f;
+    color:white;
+    font-size: 1.3em;
+    font-style: italic;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .2s ease;
+
+}
+  h2 {
+      text-align: center;
+      font-family: cursive;
+      font-weight: bolder;
+  }
+  p {
+      color: white;
+      font-size: 1.1em;
+      margin-top: 1em;
+    padding: 10px;
+    border-radius: 1em;
+    margin-left: 0.5em;
+  }
+  body {
+    padding :0px;
+    background-image: linear-gradient(#8dc43f,yellow,#e67400,rgb(98, 173, 98),rgb(137, 137, 172));
+    font-size: 1.1em;
+      margin-top: 1em;
+    padding: 10px;
+    border-radius: 1em;
+    margin-left: 0.5em;
+    font-family: italic;
+  }
+  p1{
+      color: rgb(143, 76, 173);
+    font-size: 1.1em;
+    margin-top: 1em;
+  padding: 10px;
+  border-radius: 1em;
+  margin-left: 0.5em;
+  font-family: italic;
+  text-decoration: underline;
+  }
+  p2 {
+      color: white;
+  }
+  .button {
+    background-color: rgba(185, 74, 74, 0.74);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+  }
+#img1 {
+    width:100%;
+    height: 500px;
+}

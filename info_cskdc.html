@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>CSK v DC</title>
+        <link rel="stylesheet" href="info_cskdcstyle.css">
+        <link rel="stylesheet" href="seat.css">
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js">
+        </script>
+        <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+        </head>
+        <body>
+
+            <div id="blocking" class="seatSelection col-lg-12">
+                <p class="seatSection">
+                    Click on any seat to book it 
+                </p>
+                <div class="seatsChart col-lg-6">
+                    <div class="seatRow step">
+                        <div class="seatRowNumber">
+                            Row 1
+                        </div>
+                        <div id="1_1" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber">1</div>
+                        <div id="1_2" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">2</div>
+                        <div id="1_3" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">3</div>
+                        <div id="1_4" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">4</div>
+                        <div id="1_5" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">5</div>
+                        <div id="1_6" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber  ">6</div>
+                        <div id="1_7" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">7</div>
+                        <div id="1_8" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">8</div>
+
+                    </div>
+                    <div class="seatRow">
+                        <div class="seatRowNumber">
+                            Row 2
+                        </div>
+                        <div id="2_1" role="checkbox" value="42" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">1</div>
+                        <div id="2_2" role="checkbox" value="42" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">2</div>
+                        <div id="2_3" role="checkbox" value="42" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">3</div>
+                        <div id="2_4" role="checkbox" value="42" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">4</div>
+                        <div id="2_5" role="checkbox" value="42" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">5</div>
+                        <div id="2_6" role="checkbox" value="42" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">6</div>
+                        <div id="2_7" role="checkbox" value="42" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">7</div>
+                        <div id="2_8" role="checkbox" value="42" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">8</div>
+
+                    </div>
+                    <div class="seatRow step">
+                        <div class="seatRowNumber">
+                            Row 3
+                        </div>
+                        <div id="3_1" role="checkbox" value="38" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">1</div>
+                        <div id="3_2" role="checkbox" value="38" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">2</div>
+                        <div id="3_3" role="checkbox" value="38" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">3</div>
+                        <div id="3_4" role="checkbox" value="38" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">4</div>
+                        <div id="3_5" role="checkbox" value="38" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">5</div>
+                        <div id="3_6" role="checkbox" value="38" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber  ">6</div>
+                        <div id="3_7" role="checkbox" value="38" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">7</div>
+                        <div id="3_8" role="checkbox" value="38" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">8</div>
+
+                    </div>
+                    <div class="seatRow">
+                        <div class="seatRowNumber">
+                            Row 4
+                        </div>
+                        <div id="4_1" role="checkbox" value="30" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">1</div>
+                        <div id="4_2" role="checkbox" value="30" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">2</div>
+                        <div id="4_3" role="checkbox" value="30" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">3</div>
+                        <div id="4_4" role="checkbox" value="30" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">4</div>
+                        <div id="4_5" role="checkbox" value="30" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">5</div>
+                        <div id="4_6" role="checkbox" value="30" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">6</div>
+                        <div id="4_7" role="checkbox" value="30" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">7</div>
+                        <div id="4_8" role="checkbox" value="30" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">8</div>
+
+                    </div>
+                    <div class="seatRow step">
+                        <div class="seatRowNumber step">
+                            Row 5
+                        </div>
+                        <div id="5_1" role="checkbox" value="28" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">1</div>
+                        <div id="5_2" role="checkbox" value="28" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">2</div>
+                        <div id="5_3" role="checkbox" value="28" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">3</div>
+                        <div id="5_4" role="checkbox" value="28" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">4</div>
+                        <div id="5_5" role="checkbox" value="28" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">5</div>
+                        <div id="5_6" role="checkbox" value="28" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">6</div>
+                        <div id="5_7" role="checkbox" value="28" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">7</div>
+                        <div id="5_8" role="checkbox" value="28" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">8</div>
+                    </div>
+                </div>
+                <div class="seatsReceipt col-lg-2">
+                    <p><strong>Selected Seats: <span id="seatsAmount" >0</span></strong> <button id="btnClear" class="btn">Clear</button></p>
+                    <ul id="seatsList" class="nav nav-stacked"></ul>
+
+                </div>
+
+            <div class="checkout col-lg-offset-6">
+                <span>Total: Rs </span><span id="txtSubTotal">0.00</span><br />
+                <a href="payment.html" ><button id="btnCheckout" name="btnCheckout" class="btn btn-primary" onclick="update(1)"> Click to pay</button></a>
+            </div>
+</div>
+    <!--<div class="header" >
+        <a href="home.html"><div class="home">HOME</div></a>
+        
+    </div>-->
+
+
+            <div class="header" style="background-image: linear-gradient(yellow,gold);">
+                <a href="home.php"><div class="home">HOME</div></a>
+                <!--<a href="index (1).html"><div class="register" >REGISTER</div></a>-->
+                <!--<a href="#bookingm"><div class="booking">BOOK YOUR TICKET</div></a>-->
+                <!--<a href=""><div class="history">HISTORY</div></a>
+                <a href="#supportm"><div class="support">SUPPORT</div></a>
+                <a href="#aboutm"><div class="about">ABOUT US</div></a>-->
+                <a href="logout.php" style="float: right;"><div class="login">LOGOUT</div></a>
+                
+                <!--<div class="username">ASHWINKUMAR</div> -->
+                
+            </div>
+            <div class="banner">
+                <div class="content">
+                    <h2 style="color: white;">Chennai Super Kings v Delhi Capitals</h2>
+                    <img src="csk v dc.jpg" id="img1">
+                    <p>Without intending any puns, it must be said that Chennai Super Kings 
+                        appeared to age significantly through the course of last year's IPL. 
+                        Doubts regarding their ability to challenge for top honours date back to 2018, 
+                        but they responded with a title win in MS Dhoni's best season, and 
+                        followed it with a final appearance in 2019. But, 2020 felt different. 
+                        They just about avoided the embarrassing wooden spoon and disintegrated beyond 
+                        recognition to bring up one of the most anticlimactic epilogues to a run full of success, 
+                        drama and unexpected revivals. For a side that's perhaps looking forward to the 
+                        big auctions and a complete reset more than most others, 
+                        the addition of a fourth year to the cycle provides a rare chance to 
+                        alter the narrative one last time. The question is can they somehow find it in them 
+                        to shrug off the rust from just six months ago and put in significantly improved performances? 
+                        There's one question as far as Delhi Capitals are concerned too; after a final appearance in 2020, 
+                        can they go one step further? But that's still a question for much later. For Saturday, 
+                        they need to dip into the depths of their squad to find replacements for some of their regulars 
+                        from last season. </p>
+                    <p1>Date:</p1><p2>10/APR/2021 </p2>
+                    <br>
+                    <p1>Time:</p1><p2>7:30 PM GMT</p2>
+                    <br>
+                    <p1>Venue:</p1><p2>Wankhede Stadium, Mumbai</p2>
+                    <br>
+                    <br>
+                    <div class="button1">
+                    <button type="button" class="button" id="button" onclick="dis(1)">Book Tickets</button>
+                    </div>
+                </div>
+            </div>
+            <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+             <script src="bill.js"></script>
+        </body>
+</html>
